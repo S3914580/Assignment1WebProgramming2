@@ -1,0 +1,85 @@
+
+*{
+    box-sizing: border-box;
+}
+.navigation{
+    background: #46AFF5;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+.logo{
+    font-size: 1.5em;
+    margin: 1.3em;
+}
+.navigation ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navigaion .navigation_links{
+    font-weight: 700;
+}
+.navigation .navigation_links li a{
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 2em
+}
+.navigation li:hover{
+    background-color: gray;
+}
+.navigation .menu_button{
+    display: none;
+}
+.navigaion .button_connect{
+    top: 2em;
+    right: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    display: none;
+}
+.navigation .button_connect .line{
+    width: 100px;
+    height: 2px;
+    border-top: 10px;
+    background-color: azure;
+}
+@media (max-width: 480px){
+    .navigation{
+        flex-direction: column;
+        width: 100px;
+        max-height: 0px;
+        transition: max-height 0.5s ease-out;
+    }
+    .navigation .button_connect{
+        display: flex;
+        cursor: pointer;
+    }
+    .navigaion .menu_button:checked ~ .navigation_links{
+        max-height: 250;
+    }
+    .navigation{
+        text-align: center;
+    }
+}
+
+.footer{
+    background-color: lightgray;
+}
+.footer .navigation_2{
+    max-width: 480px;
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 0.5em;
+}
+.footer .navigation_2 .column h3{
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5em;
+}
